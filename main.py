@@ -9,7 +9,7 @@ def main():
         1. Safe Distance from Blast
         2. Nuke Stay Time
         3. Determine Radiation Levels (inverse square)
-        4. Blast Pressures in Pounds per Square Inch (PSI)
+        4. *Chart* PSI by K-Factor and Effects on the Body
         5. Quit
 
         >>> """)
@@ -21,7 +21,7 @@ def main():
     elif choice == '3':
         radiation_levels()
     elif choice == '4':
-        return
+        psi()
     else:
         print("Please select a number between 1-4.")
         main()
@@ -116,6 +116,36 @@ def radiation_levels():
         print("Please select a number between 1-4")
         radiation_levels(3)
     run_another(3)
+
+def psi():
+    print("""
+    *****************
+    |K-Factor -> PSI|
+    *****************
+        
+    K-2   =  313.91
+    K-5   =  41.95
+    K-10  = 9.56
+    K-20  = 3
+    K-50  = .89
+    K-328 = .066
+        
+    **************************
+    |Damage to the human body|
+    **************************
+        
+    < 0.2 PSI   = Below threshold for temporary ear damage
+    0.2 PSI     = Temporary ear damage
+    5.0 PSI     = Eardrum rupture threshold
+    15.0 PSI    = 50% Eardrum rupture
+    30-40 PSI   = Lung damage threshold
+    80.0 PSI    = 50% Lung damange
+    130-180 PSI = 50% Lethality
+    200-250 PSI = ~100% lethality
+    """)
+
+    input('\nHit Enter To Continue')
+    main()
 
 
 main()
