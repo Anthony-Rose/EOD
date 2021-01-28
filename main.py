@@ -1,8 +1,16 @@
 import math
+import time
 
 def main():
     cls()
     choice = input("""
+                                                               c=====e
+                                                                  H
+   ____________                                              _,,__H___
+  (__((__((___()                                            //| NAVY |
+ (__((__((___()()__________________________________________// | EOD  |
+(__((__((___()()()-----------------------------------------'  |______|
+
         Welcome to the Explosive Ordnance Disposal Calculator
         What would you like to do?
 
@@ -39,7 +47,15 @@ def safe_distance():
     cube_root = float(new) ** (1. / 3.)
     safe_distance = float(cube_root) * int(k_fact)
 
-    print(f"Stay {math.ceil(safe_distance)}' from the point of initiation.")
+    print(f"""
+
+
+    ***********************************************
+    Stay {math.ceil(safe_distance)}' from the point of initiation.
+    ***********************************************
+
+
+    """)
     run_another(1)
 
 
@@ -117,18 +133,65 @@ def radiation_levels():
         radiation_levels(3)
     run_another(3)
 
+def nuke():
+    cls()
+    print("""
+                        _ ._  _ , _ ._
+                      (_ ' ( `  )_  .__)
+                    ( (  (    )   `)  ) _)
+                   (__ (_   (_ . _) _) ,__)
+                       `~~`\ ' . /`~~`
+                            ;   ;
+                            /   |
+              _____________/_ __ \_____________
+              
+    """)
+    time.sleep(.5)
+    cls()
+    print("""
+                       .-^^---....,,--       
+                   _--                  --_  
+                 <                        >)
+                 |                         | 
+                  \._                   _./  
+                     ```--. . , ; .--'''       
+                           | |   |             
+                        .-=||  | |=-.   
+                        `-=#$%&%$#=-'   
+                           | ;  :|
+                  _____.,-#%&$@%#&#~,._____
+    """)
+    time.sleep(.5)
+    cls()
+    print("""
+                             ____
+                     __,-~~/~    `---.
+                   _/_,---(      ,    )
+               __ /        <    /   )  \___
+  - ------===;;;'====------------------===;;;===----- -  -
+                  \/  ~"~"~"~"~"~\~"~)~"/
+                  (_ (   \  (     >    \)
+                   \_( _ <         >_>'
+                      ~ `-i' ::>|--"
+                          I;|.|.|
+                         <|i::|i|`.
+                        (` ^'"`-' ")
+    """)
+    time.sleep(.5)
+    cls()
+
 def psi():
     print("""
     *****************
     |K-Factor -> PSI|
     *****************
-        
-    K-2   =  313.91
-    K-5   =  41.95
-    K-10  = 9.56
-    K-20  = 3
-    K-50  = .89
-    K-328 = .066
+                     
+    K-2   =  313.91   
+    K-5   =  41.95    
+    K-10  = 9.56     
+    K-20  = 3        
+    K-50  = .89      
+    K-328 = .066     
         
     **************************
     |Damage to the human body|
@@ -147,5 +210,5 @@ def psi():
     input('\nHit Enter To Continue')
     main()
 
-
+nuke()
 main()
